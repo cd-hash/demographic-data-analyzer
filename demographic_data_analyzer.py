@@ -40,7 +40,7 @@ def calculate_demographic_data(print_data=True):
     highest_earning_country_percentage = df['native-country'].loc[df['salary'] == '>50K'].count().max()
 
     # Identify the most popular occupation for those who earn >50K in India.
-    top_IN_occupation = df.loc[(df['native-country'] == 'India') & (df['salary'] == '>50K')]
+    top_IN_occupation = df.loc[(df['native-country'] == 'India') & (df['salary'] == '>50K')].occupation.value_counts()
 
     # DO NOT MODIFY BELOW THIS LINE
 
